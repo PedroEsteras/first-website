@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Pedro{% endblock %}
+
+{% block navbar_items %}
+<a class="nav-item nav-link" href="{{ url_for('log_in') }}">Ingresar</a>
+<a class="nav-item nav-link" href="#Contacto">Contacto</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="bg" style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/1b/Puerto_madero_1_%28cropped%29.png);">
+    <div class="logo-section">
+        <img src="static/images/logo1.png" class="logo">
+    </div>
+</div>
+
+{% endblock %}

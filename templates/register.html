@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}Registrarme{% endblock %}
+
+{% block navbar_items %}
+<a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+<a class="nav-item nav-link" href="{{ url_for('log_in') }}">Ingresar</a>
+{% endblock %}
+
+{% block content %}
+<div class="bg"
+    style="background-image: url(https://conocedores.com/wp-content/uploads/2020/02/museos-gratis-buenos-aires-050220-4.jpg);">
+    <div class="logo-section">
+        <div class="left" style="padding-top: 8vh;">
+            <span class="section-title">REGISTRARME</span>
+            <form method="post" action="{{ url_for('register') }}" autocomplete="off" novalidate>
+                {{ form.csrf_token() }}
+                {{ form.hidden_tag() }}
+
+                {{ form.name.label(class_="input-label") }}
+                <br>
+
+                {{ form.name(class_="my-input") }}
+                {% if form.name.errors: %}
+                <br>
+                <p class="alert-error">{{ form.name.errors[0] }}</p>
+                {% endif %}
+
+                <br>
+
+                {{ form.mail.label(class_="input-label") }}
+                <br>
+                {{ form.mail(class_="my-input") }}
+                {% if form.mail.errors: %}
+                <br>
+                <p class="alert-error">{{ form.mail.errors[0] }}</p>
+                {% endif %}
+
+                <br>
+
+                {{ form.age.label(class_="input-label") }}
+                <br>
+                {{ form.age(class_="my-input") }}
+                {% if form.age.errors: %}
+                <br>
+                <p class="alert-error">{{ form.age.errors[0] }}</p>
+                {% endif %}
+
+                <br>
+
+                {{ form.username.label(class_="input-label") }}
+                <br>
+                {{ form.username(class_="my-input") }}
+                {% if form.username.errors: %}
+                <br>
+                <p class="alert-error">{{ form.username.errors[0] }}</p>
+                {% endif %}
+
+                <br>
+
+                {{ form.password.label(class_="input-label") }}
+                <br>
+                {{ form.password(class_="my-input") }}
+                {% if form.password.errors: %}
+                <br>
+                <p class="alert-error">{{ form.password.errors[0] }}</p>
+                {% endif %}
+
+                <br>
+
+                {{ form.confirm_password.label(class_="input-label") }}
+                <br>
+                {{ form.confirm_password(class_="my-input") }}
+                {% if form.confirm_password.errors: %}
+                <br>
+                <p class="alert-error">{{ form.confirm_password.errors[0] }}</p>
+                {% endif %}
+
+                <br>
+
+                {{ form.submit(class_="my-button")}}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

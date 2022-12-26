@@ -1,0 +1,129 @@
+
+
+.bg {
+    height: 90vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.logo-section {
+    background-color:rgba(255, 255, 255, 0.7);
+    width: 40%;
+    height: 90vh;
+}
+
+.logo {
+    display: block;
+    margin-left: 38%;
+    margin-right: auto;
+    padding-top: 28vh;
+    margin-bottom: auto;
+}
+
+.my-navbar {
+    height: 10vh;
+    background-color: #FFFFFF;
+    color: black;
+}
+
+.section {
+    height: 100vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-title {
+    color: #080404;
+    font-weight: 700;
+    font-size: 8mm;
+    letter-spacing: 0mm;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.my-footer {
+    line-height: 4vh;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.right {
+    margin-right: 16vw;
+}
+
+.left {
+    margin-left: 16vw;
+}
+
+.my-border {
+    border: 5px solid #080404;
+    padding: 2mm;
+}
+
+.my-button {
+    border: solid;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition-duration: 0.4s;
+    cursor:default;
+    background-color: white;
+    color: #080404;
+    border: 2px solid #080404;
+    margin: 3mm 0mm;
+}
+
+.my-button:hover {
+    background-color: #080404;
+    color: white;
+    cursor: default;
+}
+
+hr {
+    border: 0,5px solid #080404;
+    color: #080404;
+    padding: 0px;
+    margin: 0px; 
+}
+
+.login {
+    background-color:rgba(255, 255, 255, 0.7);
+    height: 80vh;
+    width:72vw;
+    margin-top: 8vh;
+    margin-left: 12vw;
+    padding: 4vh 4vw;
+}
+
+.my-input {
+    box-sizing: border-box;
+    border: #080404 2px solid;
+    background-color: #FFFFFF;
+    width: 30ch;
+    font-size: 16px;
+    line-height: 4vh;
+}
+
+.input-label {
+    color: #080404;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 0.5vh;
+}
+
+.alert-error {
+    color: red;
+     margin-bottom: -3vh;
+     font-weight: 400;
+}
+

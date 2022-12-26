@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Ingresar{% endblock %}
+
+{% block navbar_items %}
+<a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+<a class="nav-item nav-link" href="{{ url_for('register') }}">Registrarme</a>
+{% endblock %}
+
+{% block content %}
+<div class="bg"
+    style="background-image: url(https://www.buenosaires.gob.ar/sites/gcaba/files/field/image/39968172_2103632506313958_3813927686082920448_o.jpg);">
+    <div class="logo-section">
+        <div class="left" style="padding-top: 10vh;">
+            <span class="section-title">INGRESAR</span>
+            <form  method="post" action="{{ url_for('log_in') }}" autocomplete="off" novalidate>
+                {{ form.csrf_token() }}
+                {{ form.hidden_tag() }}
+
+                {{ form.username.label(class_="input-label") }}
+                <br>
+                {{ form.username(class_="my-input") }}
+                {% if form.username.errors: %}
+                <br> 
+                <p class="alert-error">{{ form.username.errors[0] }}</p> 
+                {% endif %}
+
+                <br>
+
+                {{ form.password.label(class_="input-label") }}
+                <br>
+                {{ form.password(class_="my-input") }}
+                {% if form.password.errors: %}
+                <br> 
+                <p class="alert-error">{{ form.password.errors[0] }}</p> 
+                {% endif %}
+
+                <br> 
+                {{ form.submit(class_="my-button")}}
+                
+                <a href="{{ url_for('register') }}">
+                 <button type="button" class="my-button" href="{{ url_for('register') }}">Registrarme</button>
+                </a>
+
+            </form>
+           
+            
+            
+            
+        </div>
+    </div>
+</div>
+{% endblock %}
